@@ -27,8 +27,10 @@ $ kubectl create -f cockroachdb-demo.yaml
 ```
 
 ### CockroachDB on AWS using GlusterFS volumes
+TBD
 
 ### CockroachDB on VMs using GlusterFS volumes
+TBD
 
 # Credits
 
