@@ -17,7 +17,7 @@ $ git clone -b gluster https://github.com/lpabon/tectonic-installer.git
 ### CockroachDB on AWS using EBS volumes
 
 ```
-$ kubectl create -f storage/aws-storageclass
+$ kubectl create -f storage/aws-storageclass.yaml
 ```
 
 Ensure `cockroachdb-demo.yaml` points to the `aws-ebs` storage class.
