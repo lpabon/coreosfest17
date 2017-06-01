@@ -1,4 +1,10 @@
+# Display nodes only on each zone
+kubectl get nodes --selector=node-role.kubernetes.io/node=,failure-domain.beta.kubernetes.io/zone=us-west-1a
+kubectl get nodes --selector=node-role.kubernetes.io/node=,failure-domain.beta.kubernetes.io/zone=us-west-1c
 
-kubectl run -i --tty --image busybox dns-test --restart=Never --rm /bin/sh 
+# Use to test dns in statefulset
+# Run: nslookup <pod name>.<statefulset name>
+kubectl run -i --tty --image busybox dns-test --restart=Never --rm /bin/sh
 
-kubectl --kubeconfig=kubeconfig.aws get nodes --selector=failure-domain.beta.kubernetes.io/zone=us-west-1c
+# Scale application
+kubectl scale statefulset cockroachdb --replicas=4

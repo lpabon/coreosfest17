@@ -161,7 +161,7 @@ spec:
   - metadata:
       name: datadir
       annotations:
-        volume.beta.kubernetes.io/storage-class: gluster.qm.storage
+        volume.beta.kubernetes.io/storage-class: gluster.qm.default
     spec:
       accessModes:
         - "ReadWriteMany"
