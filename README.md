@@ -30,7 +30,7 @@ $ kubectl create -f cockroachdb-demo.yaml
 
 * Follow [Deploying Quartermaster](https://github.com/coreos/quartermaster#deploying-quartermaster)
 * Setup RBAC permissions for Heketi (The GlusterFS manager) by submitting the files in https://github.com/coreos/quartermaster/tree/master/examples/glusterfs/auth/rbac
-* Create then submit a `StorageCluster` yaml using the [glusterfs aws example](https://github.com/coreos/quartermaster/blob/master/examples/glusterfs/aws.yaml)
+* Create then submit a `StorageCluster` yaml using the [storage/glusterfs/aws.yaml](https://github.com/lpabon/coreosfest17/blob/master/storage/glusterfs/aws.yaml)
 * Get the storageclass name for the gluster cluster, most like it will be `gluster.qm.default`
 * Edit `cockroachdb-demo.yaml` and change the storageclass value
 * Submit cockroachdb-demo.yaml
@@ -38,8 +38,8 @@ $ kubectl create -f cockroachdb-demo.yaml
 ### CockroachDB on VMs using GlusterFS volumes
 
 * Follow [Deploying Quartermaster](https://github.com/coreos/quartermaster#deploying-quartermaster)
-* Setup RBAC permissions for Heketi (The GlusterFS manager) by submitting the files in https://github.com/coreos/quartermaster/tree/master/examples/glusterfs/auth/rbac
-* Create then submit a `StorageCluster` yaml using the [glusterfs matchbox example](https://github.com/coreos/quartermaster/blob/master/examples/glusterfs/matchbox-bootkube.yaml)
+* Setup RBAC permissions for Heketi (The GlusterFS manager) by submitting the files in [storage/glusterfs/auth/rbac](https://github.com/lpabon/coreosfest17/tree/master/storage/glusterfs/auth/rbac)
+* Create then submit a `StorageCluster` yaml using the [storage/glusterfs/matchbox-bootkube.yaml](https://github.com/lpabon/coreosfest17/blob/master/storage/glusterfs/matchbox-bootkube.yaml)
 * Get the storageclass name for the gluster cluster, most like it will be `gluster.qm.default`
 * Edit `cockroachdb-demo.yaml` and change the storageclass value
 * Submit cockroachdb-demo.yaml
